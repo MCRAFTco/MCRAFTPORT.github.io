@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M CRAFT</title>
+    <title>MIND CRAFT</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
      <!-- 遮罩层 -->
-     <div id="overlay" class="overlay"></div>
-
-      <!-- 菜单容器 -->
-      <div class="menu-container">
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-            <div class="bar bar3"></div>
-        </div>
-        <span id="menu-text">Menu</span> <!-- 这里是 Menu 文字 -->
-        <div class="menu" id="menu">
-           <a href="collection/index.html">COLLECTION</a> <!-- 修改这里 -->
-            <a href="about/index.html">ABOUT US</a>
-            <a href="contact/index.html">CONTACT US</a>
-        </div>
-    </div>
 
     <!-- 页面内容 -->
     <section class="hero">
@@ -72,11 +57,30 @@
 </div>
     <!-- 引用 JavaScript 文件 -->
     <script src="script.js"></script>
+</div>
 
-    <!-- Footer Content -->
-<div class="footer">
-    <div class="circle-text">© 2025 M CRAFT</div>
+<!-- Footer (only top section) -->
+<div class="footer-top">
+  <div class="container">
+    <!-- General Email -->
+    <div class="ft-col">
+      <div class="ft-title">GENERAL EMAIL</div>
+      <div class="ft-email">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:mindcraftbeads@gmail.com">	mindcraftbeads@gmail.com</a>
+      </div>
     </div>
+    <!-- Follow Us -->
+    <div class="ft-col">
+      <div class="ft-title">FOLLOW US</div>
+      <div class="ft-social-top">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="WeChat"><i class="fa-brands fa-weixin"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>

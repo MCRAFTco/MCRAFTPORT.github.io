@@ -171,8 +171,8 @@ body {
 
   
 .logo img {
-    width: 310px;  /* 调整 logo 的宽度 */
-    height: 110px; /* 调整 logo 的高度 */
+    width: 200px;  /* 调整 logo 的宽度 */
+    height: 135px; /* 调整 logo 的高度 */
     object-fit: contain; /* 保持图片比例 */
 }
 
@@ -287,20 +287,6 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 可选：为图片添加阴影 */
 }
 
-/* Footer Content */
-.footer {
-    position: fixed;  /* 固定在页面底部 */
-    bottom: 5px;     /* 距离底部 20px */
-    left: 1500px;       /* 距离左边 20px */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.8rem;  /* 调整字体大小 */
-    color: #333;  /* 设置文本颜色 */
-    text-align: left;
-    max-width: 300px;  /* 限制文本宽度以便于阅读 */
-    word-wrap: break-word;  /* 确保长文本换行 */
-    z-index: 10;  /* 确保 footer 在其他内容之上 */
-}
-
 .circle-text {
     font-weight: normal;
     font-size: 1rem;  /* 略大的字体 */
@@ -313,6 +299,68 @@ body, .container {
     height: 100%;  /* 让 body 或容器占满整个页面高度 */
 }
 
+/* Footer Top */
+.footer-top{
+  background:#fff;
+  border-top:1px solid var(--line);
+  padding:28px 0 22px;
+}
+.footer-top .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+/* 左右两列 */
+.ft-col{
+  min-width:240px;
+}
+
+/* 标题：左右细线 + 全大写 */
+.ft-title{
+  position:relative;
+  display:inline-block;
+  color:var(--muted);
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin:0 0 12px;
+  padding:0 14px;
+}
+.ft-title::before,
+.ft-title::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:36px; height:1px;
+  background:var(--muted);
+}
+.ft-title::before{ right:100%; margin-right:12px; }
+.ft-title::after { left:100%;  margin-left:12px;  }
+
+/* 邮箱样式 */
+.ft-email{
+  display:flex; align-items:center; gap:10px;
+  font-size:16px;
+}
+.ft-email i{ color:#6d6765; font-size:20px; }
+.ft-email a{
+  color:#6d6765; text-decoration:underline; text-underline-offset:3px;
+}
+
+/* 社交图标 */
+.ft-social-top{ display:flex; align-items:center; gap:16px; }
+.ft-social-top a{
+  color:#6d6765; font-size:22px; line-height:1;
+}
+.ft-social-top a:hover{ opacity:.8; }
+
+/* 响应式调整 */
+@media (max-width: 600px){
+  .footer-top .container{ flex-direction:column; gap:20px; }
+}
 
 /* 响应式设计：调整屏幕较小时的布局 */
 @media screen and (max-width: 768px) {
