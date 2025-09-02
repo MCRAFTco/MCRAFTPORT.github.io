@@ -883,17 +883,7 @@ body, .container {
   padding: 0 20px;
 }
 
-/* Copyright line as part of the page flow (no floating) */
-.copyright-footer{
-  position: static;           /* follow normal document flow */
-  display: block;
-  text-align: right;          /* stick to the right within the footer area */
-  font-size: 13px;
-  color: #666;
-  background: transparent;    /* blend with page; set to #f9f9f9 if you want a bar */
-  padding: 30px 20px;         /* inner spacing */
-  border: 0;                  /* no border since it's not floating */
-}
+
 /* === Controls for copyright position (no longer needed for non-floating copyright) === */
 
 /* Top-left Contact Us 链接样式 */
@@ -922,3 +912,20 @@ body, .container {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* ===== Footer spacing control ===== */
+.site-footer{
+  margin-top: 50px;  /* ↑ 向下移动整块“联系方式 + 版权”的距离；想更远就加大数值 */
+}
+
+/* Copyright line as part of the page flow (no floating) */
+.copyright-footer{
+  position: static;           /* follow normal document flow */
+  display: block;
+  text-align: right;          /* stick to the right within the footer area */
+  font-size: 13px;
+  color: #666;
+  background: transparent;    /* blend with page; set to #f9f9f9 if you want a bar */
+  padding: 30px 20px;         /* inner spacing */
+  border: 0;   
+  margin-top: -70px;               /* no border since it's not floating */
+}
